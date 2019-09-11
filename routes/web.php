@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', 'HomeController@index')->name('index');
+
+Route::get('/eloquent', 'EloquentController@index')->name('eloquent_index');
+Route::get('/eloquent/model', 'EloquentController@model')->name('eloquent_model');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
