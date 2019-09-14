@@ -17,6 +17,7 @@ Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('/eloquent', 'EloquentController@index')->name('eloquent_index');
 Route::get('/eloquent/model', 'EloquentController@model')->name('eloquent_model');
+Route::get('/eloquent/collection', 'EloquentController@collection')->name('eloquent_collection');
 
 //Auth::routes();
 

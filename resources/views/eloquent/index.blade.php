@@ -8,6 +8,11 @@
                 Model tests
             </a>
         </li>
+        <li>
+            <a href=" {{ route('eloquent_collection') }}">
+                Collection tests
+            </a>
+        </li>
     </ul>
 
 @endsection

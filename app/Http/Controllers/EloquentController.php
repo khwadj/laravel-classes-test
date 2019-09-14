@@ -15,4 +15,9 @@ class EloquentController extends Controller
     {
         return view('eloquent/model', []);
     }
+
+    function collection()
+    {
+        return view('eloquent/collection', []);
+    }
 }
