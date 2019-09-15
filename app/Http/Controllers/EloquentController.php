@@ -20,4 +20,9 @@ class EloquentController extends Controller
     {
         return view('eloquent/collection', []);
     }
+
+    function cache()
+    {
+        return view('eloquent/cache', []);
+    }
 }
