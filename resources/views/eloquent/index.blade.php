@@ -18,6 +18,11 @@
                 Model tests
             </a>
         </li>
+        <li>
+            <a href=" {{ route('eloquent_builder') }}">
+                Builder tests
+            </a>
+        </li>
     </ul>
 
 @endsection

@@ -25,4 +25,9 @@ class EloquentController extends Controller
     {
         return view('eloquent/cache', []);
     }
+
+    function builder()
+    {
+        return view('eloquent/builder', []);
+    }
 }

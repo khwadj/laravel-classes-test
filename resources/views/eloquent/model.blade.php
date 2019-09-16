@@ -42,7 +42,7 @@
                 @endphp
 
                 <div class="">
-                    $ingredient = \App\Ingredient::find(1);
+                    $ingredient = \App\Ingredient::find(1);<br>
                     $key = $ingredient->getLocalCacheKey();
                 </div>
 
