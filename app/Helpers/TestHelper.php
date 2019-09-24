@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 if (! function_exists('assertTrue')) {
     /**
      * Translate the given message.
@@ -22,7 +24,32 @@ if (! function_exists('assertTrue')) {
     }
 }
 
+if (! function_exists('startDbWatch')) {
+    function startDbWatch()
+    {
+        $a = TestHelper::$calls;
+        TestHelper::$calls = [];
+        $b = TestHelper::$calls;
+    }
+}
+
+if (! function_exists('dbCallCount')) {
+    function dbCallCount()
+    {
+        return count(TestHelper::$calls);
+    }
+}
+
+if (! function_exists('testStats')) {
+    function testStats()
+    {
+        return new \Illuminate\Support\HtmlString(
+            '<small>' . dbCallCount() . '</small> database call(s)'
+        );
+    }
+}
+
 class TestHelper
 {
-
+    public static $calls = [];
 }

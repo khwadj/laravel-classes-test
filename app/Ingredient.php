@@ -10,6 +10,8 @@ use Khwadj\Eloquent\Model;
  *
  * @property int $ingredient_id
  * @property int $name
+ *
+ * @property RecipeIngredient recipe_ingredients
  */
 class Ingredient extends Model
 {
@@ -21,7 +23,10 @@ class Ingredient extends Model
 
     public $timestamps = FALSE;
 
-    public function recette_ingredient()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function recipe_ingredients()
     {
         return $this->hasMany('App\RecipeIngredient', 'fk_ingredient_id');
     }
