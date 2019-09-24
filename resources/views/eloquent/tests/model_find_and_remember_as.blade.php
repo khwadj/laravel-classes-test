@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     /** @var \App\Ingredient $ingredient */
     $key = 'banana';
     $ingredient = \App\Ingredient::find_and_remember_as(1, $key);
@@ -27,9 +27,8 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 </div>

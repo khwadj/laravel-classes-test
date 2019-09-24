@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     $ingredient = \App\Ingredient::find_or_recall(1);
     $r_i = $ingredient->recipe_ingredients();
     $r_i_result = $r_i->get();
@@ -25,9 +25,8 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 </div>

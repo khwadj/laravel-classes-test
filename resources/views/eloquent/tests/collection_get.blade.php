@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     $ingredients = \App\Ingredient::all();
     $ingredient = $ingredients->get(1);
 @endphp
@@ -22,9 +22,8 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 </div>

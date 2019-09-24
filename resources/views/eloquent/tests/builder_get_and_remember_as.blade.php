@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     $ingredients = \App\Ingredient::whereIn('ingredient_id', [1,2])->get_and_remember_as('one_and_two');
     $ingredients2 = \App\Ingredient::cacheGet('one_and_two');
 @endphp
@@ -23,9 +23,8 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 </div>

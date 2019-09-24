@@ -474,12 +474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/khwadj/laravel-classes.git",
-                "reference": "d85ed4daea660b2d94fb1eb1f86e649a80e07465"
+                "reference": "c868d04a46d266c74e57ff5af7fecd96c6dca920"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/khwadj/laravel-classes/zipball/d85ed4daea660b2d94fb1eb1f86e649a80e07465",
-                "reference": "d85ed4daea660b2d94fb1eb1f86e649a80e07465",
+                "url": "https://api.github.com/repos/khwadj/laravel-classes/zipball/c868d04a46d266c74e57ff5af7fecd96c6dca920",
+                "reference": "c868d04a46d266c74e57ff5af7fecd96c6dca920",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +504,7 @@
             ],
             "description": "Collection of utility classes",
             "homepage": "https://github.com/khwadj/laravel-classes",
-            "time": "2019-09-16T14:10:47+00:00"
+            "time": "2019-09-24T14:14:33+00:00"
         },
         {
             "name": "laravel/framework",

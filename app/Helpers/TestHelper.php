@@ -27,9 +27,7 @@ if (! function_exists('assertTrue')) {
 if (! function_exists('startDbWatch')) {
     function startDbWatch()
     {
-        $a = TestHelper::$calls;
         TestHelper::$calls = [];
-        $b = TestHelper::$calls;
     }
 }
 
@@ -40,11 +38,21 @@ if (! function_exists('dbCallCount')) {
     }
 }
 
+if (! function_exists('testStart')) {
+    function testStart()
+    {
+        startDbWatch();
+        \Khwadj\Eloquent\Cache::empty();
+    }
+}
+
 if (! function_exists('testStats')) {
     function testStats()
     {
         return new \Illuminate\Support\HtmlString(
-            '<small>' . dbCallCount() . '</small> database call(s)'
+            '<small>' . dbCallCount() . ' database call(s).</small> '
+            . '<br>'
+            . '<small> ' . \Khwadj\Eloquent\Cache::count().' item(s) in cache.</small>'
         );
     }
 }

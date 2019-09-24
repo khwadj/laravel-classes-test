@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     /** @var \App\Ingredient $ingredient */
     $ingredient = \App\Ingredient::find_or_recall(1);
     $ingredient2 = \App\Ingredient::find_or_recall(1);
@@ -24,10 +24,9 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 
 </div>

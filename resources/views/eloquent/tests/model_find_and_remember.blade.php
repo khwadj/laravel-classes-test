@@ -1,5 +1,5 @@
 @php
-    startDbWatch();
+    testStart();
     /** @var \App\Ingredient $ingredient */
     $ingredient = \App\Ingredient::find_and_remember(1);
     $ingredient2 = \App\Ingredient::cacheGet(\App\Ingredient::getStaticLocalCacheKeyForId(1));
@@ -24,9 +24,8 @@
             </ul>
         </div>
 
-        <div class="results">
-            {{ testStats() }}
-        </div>
-
+    </div>
+    <div class="card-footer">
+        {{ testStats() }}
     </div>
 </div>
