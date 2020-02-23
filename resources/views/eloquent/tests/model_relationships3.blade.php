@@ -1,7 +1,7 @@
 @php
     testStart();
     /** @var \App\Ingredient $ingredient */
-    $ingredient = \App\Ingredient::find_or_recall(1);
+    $ingredient = \App\Ingredient::with('recipe_ingredients')->where('ingredient_id', '=',1)->first();
     $r_i = $ingredient->recipe_ingredients;
     $all_r_i = \App\RecipeIngredient::where('fk_ingredient_id', '=', 1)->get();
 @endphp
@@ -13,7 +13,7 @@
     <div class="card-body">
 
         <div class="code">
-            $ingredient = \App\Ingredient::find_or_recall(1);<br>
+            $ingredient = \App\Ingredient::with('recipe_ingredients')->where('id', '=',1)->first();<br>
             $r_i = $ingredient->recipe_ingredients;<br>
             $all_r_i = \App\RecipeIngredient::all();
         </div>

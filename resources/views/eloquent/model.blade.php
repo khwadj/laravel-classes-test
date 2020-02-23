@@ -12,6 +12,7 @@
         @include('/eloquent/tests/model_find_or_recall', ['title' => 'Find or recall'])
         @include('/eloquent/tests/model_relationships', ['title' => 'Relationships'])
         @include('/eloquent/tests/model_relationships2', ['title' => 'Relationships 2'])
+        @include('/eloquent/tests/model_relationships3', ['title' => 'Relationships 3'])
     </div>
 
 @endsection
