@@ -15,11 +15,11 @@
 
         <div class="tests">
             <ul>
-                <li>{{ assertTrue($ingredients instanceof \Illuminate\Support\Collection, '$ingredients should be of class \Illuminate\Support\Collectiont') }}</li>
+                <li>{{ assertTrue($ingredients instanceof \Illuminate\Support\Collection, '$ingredients should be of class \Illuminate\Support\Collection') }}</li>
                 <li>{{ assertTrue($ingredients instanceof \Illuminate\Database\Eloquent\Collection, '$ingredients should be of class \Illuminate\Database\Eloquent\Collection') }}</li>
                 <li>{{ assertTrue($ingredients instanceof \Khwadj\Eloquent\Collection, '$ingredients should be of class \Khwadj\Eloquent\Collection') }}</li>
                 <li>{{ assertTrue(!$ingredients instanceof \Illuminate\Support\LazyCollection, '$ingredients should not be of class \Illuminate\Support\LazyCollection') }}</li>
-                <li>{{ assertTrue($ingredients->count() === 5, '$ingredients should have an 5 items') }}</li>
+                <li>{{ assertTrue($ingredients->count() === 5, '$ingredients should have 5 items') }}</li>
                 <li>{{ assertTrue($ingredients->has(1), '$ingredients should have an item at key 1') }}</li>
                 <li>{{ assertTrue($ingredients->has(1), '$ingredients should have an item at key 2') }}</li>
                 <li>{{ assertTrue($ingredients->has(1), '$ingredients should have an item at key 3') }}</li>

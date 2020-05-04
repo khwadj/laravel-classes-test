@@ -7,6 +7,8 @@
 
         @include('/eloquent/tests/collection_all', ['title' => 'model::all()'])
         @include('/eloquent/tests/collection_get', ['title' => 'collection->get()'])
+        @include('/eloquent/tests/collection_filter', ['title' => 'collection->filter()'])
+        @include('/eloquent/tests/collection_sort', ['title' => 'collection->sort()'])
     </div>
 
 @endsection
