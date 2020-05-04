@@ -42,7 +42,7 @@ if (! function_exists('testStart')) {
     function testStart()
     {
         startDbWatch();
-        \Khwadj\Eloquent\Cache::empty();
+        \Khwadj\Eloquent\MemoryRuntimeCache::empty();
     }
 }
 
@@ -52,7 +52,7 @@ if (! function_exists('testStats')) {
         return new \Illuminate\Support\HtmlString(
             '<small>' . dbCallCount() . ' database call(s).</small> '
             . '<br>'
-            . '<small> ' . \Khwadj\Eloquent\Cache::count().' item(s) in cache.</small>'
+            . '<small> ' . \Khwadj\Eloquent\MemoryRuntimeCache::count().' item(s) in MemoryRuntimeCache.</small>'
         );
     }
 }

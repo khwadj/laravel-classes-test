@@ -1,11 +1,11 @@
 @php
     testStart();
-    $cache_items_at_start   = \Khwadj\Eloquent\Cache::count();
+    $cache_items_at_start   = \Khwadj\Eloquent\MemoryRuntimeCache::count();
     /** @var \App\Ingredient $ingredient */
     $ingredient             = \App\Ingredient::find(1);
     \App\Ingredient::cacheSet('someKey', $ingredient);
     $ingredient_from_cache  = \App\Ingredient::cacheGet('someKey');
-    $cache_items_at_end     = \Khwadj\Eloquent\Cache::count();
+    $cache_items_at_end     = \Khwadj\Eloquent\MemoryRuntimeCache::count();
 @endphp
 
 <div class="card unit_tests mt-4">
@@ -15,11 +15,11 @@
     <div class="card-body">
 
         <div class="code">
-            $cache_items_at_start = \Khwadj\Eloquent\Cache::count();<br>
+            $cache_items_at_start = \Khwadj\Eloquent\MemoryRuntimeCache::count();<br>
             $ingredient = \App\Ingredient::find(1);<br>
             \App\Ingredient::cacheSet('someKey', $ingredient);<br>
             $ingredient_from_cache = \App\Ingredient::cacheGet('someKey');<br>
-            $cache_items_at_end = \Khwadj\Eloquent\Cache::count();
+            $cache_items_at_end = \Khwadj\Eloquent\MemoryRuntimeCache::count();
         </div>
 
         <div class="tests">
